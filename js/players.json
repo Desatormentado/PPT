@@ -1,0 +1,66 @@
+[
+    {
+        "nombre": "Matias",
+        "edad": 27,
+        "puntaje": 150000,
+        "victorias": 150000,
+        "derrotas": 0,
+        "empates": 0
+    },
+
+    {
+        "nombre": "Esteban Romero Squadra Propiedades",
+        "edad": 30,
+        "victorias": 200,
+        "derrotas": 50,
+        "empates": 35
+    },
+
+    {
+        "nombre": "Joel",
+        "edad": 25,
+        "victorias": 0,
+        "derrotas": 150,
+        "empates": 17
+    },
+
+    {
+        "nombre": "Fernando",
+        "edad": 30,
+        "victorias": 195,
+        "derrotas": 95,
+        "empates": 30
+    },
+
+    {
+        "nombre": "Martín",
+        "edad": 32,
+        "victorias": 49,
+        "derrotas": 15,
+        "empates": 10
+    },
+
+    {
+        "nombre": "Enzo",
+        "edad": 27,
+        "victorias": 34,
+        "derrotas": 21,
+        "empates": 4
+    },
+
+    {
+        "nombre": "Zamora",
+        "edad": 45,
+        "victorias": -15,
+        "derrotas": 300,
+        "empates": 150
+    },
+
+    {
+        "nombre": "Gustavo",
+        "edad": 34,
+        "victorias": 5,
+        "derrotas": 7,
+        "empates": 1000
+    }
+]
