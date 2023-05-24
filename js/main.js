@@ -7,6 +7,7 @@ const derrotas = document.getElementById("derrotas");
 const empates = document.getElementById("empates");
 const resultado = document.getElementById("resultado");
 const tabla = document.getElementById("tabla");
+const borrar = document.getElementById("borrarJugadores")
 
 boton.addEventListener("click", function (event) {
   event.preventDefault();
@@ -26,7 +27,7 @@ function guardarDatos() {
       position: "center",
       stopOnFocus: true, 
       style: {
-        background: "linear-gradient(90deg, rgba(0,0,167,1) 8%, rgba(0,212,255,1) 100%)",
+        background: "linear-gradient(90deg, rgba(255,0,0,1) 74%, rgba(255,176,0,1) 100%)",
       },
       onClick: function(){} 
     }).showToast();
@@ -67,6 +68,22 @@ function jugar(opcionJugador) {
   const nombrePlayer = document.getElementById("nombre").value;
   let jugador = JSON.parse(localStorage.getItem(nombrePlayer));
 
+  if (!jugador) {
+    Toastify({
+      text: "Se debe crear un usuario antes de comenzar a jugar",
+      duration: 2000,
+      newWindow: true,
+      gravity: "top",
+      position: "center",
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(90deg, rgba(255,0,0,1) 74%, rgba(255,176,0,1) 100%)",
+      },
+      onClick: function(){}
+    }).showToast();
+    return;
+  }
+
   if (opcionJugador === opcionComputadora) {
     Toastify({
       text: "Empate!",
@@ -88,14 +105,14 @@ function jugar(opcionJugador) {
     (opcionJugador === "tijeras" && opcionComputadora === "papel")
   ) {
     Toastify({
-      text: "Ganaste",
+      text: "Ganaste!",
       duration: 1000,
       newWindow: true,
       gravity: "bottom", 
       position: "center",
       stopOnFocus: true, 
       style: {
-        background: "linear-gradient(90deg, rgba(0,0,167,1) 8%, rgba(0,212,255,1) 100%)",
+        background: "linear-gradient(90deg, rgba(149,226,155,1) 0%, rgba(0,153,23,1) 100%)",
       },
       onClick: function(){} 
     }).showToast();
@@ -110,7 +127,7 @@ function jugar(opcionJugador) {
       position: "center", 
       stopOnFocus: true, 
       style: {
-        background: "linear-gradient(90deg, rgba(0,0,167,1) 8%, rgba(0,212,255,1) 100%)",
+        background: "linear-gradient(90deg, rgba(223,19,0,1) 0%, rgba(255,253,42,1) 100%)",
       },
       onClick: function(){} 
     }).showToast();
@@ -186,3 +203,8 @@ function actualizarTablaPosiciones() {
 }
 
 cargarJugadores();
+
+borrar.addEventListener("click", () => {
+  localStorage.clear();
+  actualizarTablaPosiciones();
+});

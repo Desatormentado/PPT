@@ -2,19 +2,51 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Pangolin', cursive;
+}
+
+p, h1, h2, label {
+    color: #ffffff;
+}
+
+body {
+    background-color: #0093E9;
+    background: url(/img/fondo.png), repeat linear-gradient(180deg, #0093E9 0%, #80D0C7 100%);
 }
 
 .titulo {
     display: flex;
     margin: 50px 0px 50px 0px;
     justify-content: center;
+    color: #ffffff;
 }
 
 .formulario {
     display: flex;
     justify-content: center;
+    margin: 50px 0px 0px 0px;
 }
 
+input {
+    margin: 0px 45px 0px 0px;
+}
+
+#piedra {
+    cursor: pointer;
+    height: 100px;
+    margin: 0px 87px 0px 0px;
+}
+
+#papel {
+    cursor: pointer;
+    height: 100px;
+}
+
+#tijeras {
+    cursor: pointer;
+    height: 100px;
+    margin: 0px 0px 0px 100px;
+}
 .btn {
     margin-left: 30px;
 }
@@ -27,19 +59,64 @@
 
 .botones {
     display: flex;
-    margin: 10px;
+    margin: 50px 0px;
+}
+
+.resultados {
+    display: flex;
+}
+
+.resultados p {
+    margin: 0px 40px 0px 40px;
+}
+
+.botones, p {
+    font-size: 30px;
+}
+
+.tablas {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    background-color: #8BC6EC;
+    background: linear-gradient(90deg, rgba(139,198,236,0.85) 0%, rgba(149,153,226,0.85) 100%);
+    border-radius: 10px;
+    margin: 0px auto 10px;
+}
+ 
+.tablas h2 {
+    margin: 30px 0px 10px 0px;
 }
 
 .tablaPosicion {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    color: #ffffff;
 }
 
 h2 {
     text-align: center;
+    color: #ffffff;
+}
+ 
+td, th {
+    padding: 0px 25px 0px 0px;
 }
 
-th {
-    padding: 10px;
+
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.reiniciar {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.animate__bounce {
+    animation-delay: 2s;
 }
 
